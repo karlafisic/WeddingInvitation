@@ -44,7 +44,8 @@ class RsvpController extends Controller
             return response()->json([
                 'message' => 'Potvrda je spremljena!',
                 'success' => true,
-                'warning' => 'Email obavijest možda nije poslana.'
+                'warning' => 'Email obavijest možda nije poslana.',
+                'error' => $e->getMessage() 
             ]);
         }
     }
