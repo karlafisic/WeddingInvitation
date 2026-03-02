@@ -30,7 +30,7 @@ class RsvpController extends Controller
         try {
             $rsvp = Rsvp::create($data);
             Mail::to('karla.fisic@gmail.com')
-                ->cc('darija.fisic@gmail.com')  
+                ->cc(['darija.fisic@gmail.com', 'ljubo.petricusic@gmail.com'])  
                 ->send(new RsvpMail($rsvp));
 
             return response()->json([
