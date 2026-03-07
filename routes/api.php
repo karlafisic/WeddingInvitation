@@ -7,4 +7,6 @@ use App\Http\Controllers\Api\RsvpController;
 Route::post('/rsvps', [RsvpController::class, 'store']);         
 //Route::put('/rsvps/{id}', [RsvpController::class, 'update']);    // update RSVP
 //Route::delete('/rsvps/{id}', [RsvpController::class, 'destroy']); // delete RSVP
-
+Route::get('/ping', function () {
+    return response()->json(['status' => 'ok']);
+});
